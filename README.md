@@ -4,7 +4,7 @@ ronp is a diff algorithm implementation in Rust.
 
 # Algorithm
 
-The algorithm `gonp` uses is based on "An O(NP) Sequence Comparison Algorithm" by described by Sun Wu, Udi Manber and Gene Myers.
+The algorithm `ronp` uses is based on "An O(NP) Sequence Comparison Algorithm" by described by Sun Wu, Udi Manber and Gene Myers.
 An O(NP) Sequence Comparison Algorithm(following, Wu's O(NP) Algorithm) is the efficient algorithm for comparing two sequences.
 
 ## Computational complexity
