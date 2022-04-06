@@ -1,4 +1,4 @@
-use ronp::diff;
+use ronp::diff::Diff;
 use std::env::args;
 
 fn main() {
@@ -15,7 +15,7 @@ fn main() {
     println!("A:{}", a);
     println!("B:{}", b);
 
-    let diff = diff::Diff::new(a.chars().collect::<Vec<_>>(), b.chars().collect::<Vec<_>>());
+    let diff = Diff::new(a.chars().collect::<Vec<_>>(), b.chars().collect::<Vec<_>>());
     let res = diff.build();
     println!("editdistance: {}", res.ed());
 }
