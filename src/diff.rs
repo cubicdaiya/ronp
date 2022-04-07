@@ -1,5 +1,6 @@
 use std::cmp::max;
 use std::mem::swap;
+use std::cmp::PartialEq;
 
 pub struct Diff<T> {
     a: Vec<T>,
@@ -20,7 +21,7 @@ impl DiffResult {
     }
 }
 
-impl<T: std::cmp::PartialEq> Diff<T> {
+impl<T: PartialEq> Diff<T> {
     pub fn new(mut a: Vec<T>, mut b: Vec<T>) -> Diff<T> {
         let mut m = a.len();
         let mut n = b.len();
