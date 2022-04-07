@@ -1,4 +1,4 @@
-# gonp
+# ronp
 
 ronp is a diff algorithm implementation in Rust.
 
