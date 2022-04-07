@@ -1,6 +1,6 @@
 # ronp
 
-ronp is a diff algorithm implementation in Rust.
+ronp is a diff algorithm implementation in Rust. (In early development phase)
 
 # Algorithm
 
