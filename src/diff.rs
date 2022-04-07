@@ -81,10 +81,18 @@ impl<T: PartialEq> Diff<T> {
 
 mod test {
     #[test]
-    fn test_diff() {
+    fn test_strdiff() {
         let a = "abc";
         let b = "abd";
         let diff = super::Diff::new(a.chars().collect::<Vec<_>>(), b.chars().collect::<Vec<_>>());
+        let res = diff.build();
+        assert_eq!(res.ed(), 2);
+    }
+    #[test]
+    fn test_intdiff() {
+        let a = vec![1,2,3];
+        let b = vec![1,5,3];
+        let diff = super::Diff::new(a, b);
         let res = diff.build();
         assert_eq!(res.ed(), 2);
     }
