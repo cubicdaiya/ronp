@@ -86,7 +86,7 @@ mod test {
         let b = "abd";
         let diff = super::Diff::new(a.chars().collect::<Vec<_>>(), b.chars().collect::<Vec<_>>());
         let res = diff.build();
-        assert_eq!(res.ed(), 2);
+        assert_eq!(2, res.ed());
     }
     #[test]
     fn test_intdiff() {
@@ -94,6 +94,6 @@ mod test {
         let b = vec![1,5,3];
         let diff = super::Diff::new(a, b);
         let res = diff.build();
-        assert_eq!(res.ed(), 2);
+        assert_eq!(2, res.ed());
     }
 }
