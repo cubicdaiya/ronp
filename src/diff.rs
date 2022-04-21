@@ -2,6 +2,7 @@ use std::cmp::max;
 use std::cmp::PartialEq;
 use std::mem::swap;
 
+// Diff has 2 sequences to calculate difference
 pub struct Diff<T> {
     a: Vec<T>,
     b: Vec<T>,
@@ -9,6 +10,7 @@ pub struct Diff<T> {
     n: usize,
 }
 
+// DiffResult is result of diff calculation
 pub struct DiffResult {
     ed: usize,
     // lcs: Vec<T>,
@@ -16,12 +18,14 @@ pub struct DiffResult {
 }
 
 impl DiffResult {
+    // ed returns editdistance between 2 sequences
     pub fn ed(&self) -> usize {
         return self.ed;
     }
 }
 
 impl<T: PartialEq> Diff<T> {
+    // new is initializer of Diff
     pub fn new(mut a: Vec<T>, mut b: Vec<T>) -> Diff<T> {
         let mut m = a.len();
         let mut n = b.len();
@@ -37,6 +41,7 @@ impl<T: PartialEq> Diff<T> {
         };
     }
 
+    // build builds difference between 2 sequences
     pub fn build(&self) -> DiffResult {
         let offset: usize = self.m + 1;
         let delta: usize = self.n - self.m;
